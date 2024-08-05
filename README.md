@@ -48,3 +48,50 @@ Output
 The shortest time to escape the forest or determine if it's impossible.
 Complexity
 The function for solving this problem is designed to handle large inputs efficiently, utilizing appropriate graph traversal algorithms.
+
+This repository contains the implementation of Assignment 2 for the FIT2004 unit in the first semester of 2024. The assignment includes solving problems related to open reading frames in DNA sequences and optimizing the assignment of security officers to companies.
+
+# DSA-Project-2
+Analyze general problem-solving strategies and algorithmic paradigms and apply them to solving new problems.
+Prove correctness of programs and analyze their space and time complexities.
+Compare and contrast various abstract data types and use them appropriately.
+Develop and implement algorithms to solve computational problems.
+Additionally, the project helps in developing the following employability skills:
+
+Text comprehension.
+Designing test cases.
+Ability to follow specifications precisely.
+Project Structure
+DSA Project 2.py: This is the main file containing all the solutions for the assignment.
+README.md: This file, providing an overview of the project and its structure.
+Implementation Details
+Question 1: Open Reading Frames
+Problem Description
+In molecular genetics, an Open Reading Frame (ORF) is a portion of DNA used as the blueprint for a protein. The task is to find all sections of a genome that start with a given sequence and end with a (possibly) different given sequence.
+
+Input
+genome: A single non-empty string consisting only of uppercase [A-D].
+start: A single non-empty string consisting only of uppercase [A-D].
+end: A single non-empty string consisting only of uppercase [A-D].
+Output
+A list of strings containing all substrings of the genome that have start as a prefix and end as a suffix.
+Complexity
+The __init__ method of OrfFinder must run in O(N²) time complexity, where N is the length of the genome.
+The find method must run in O(T + U + V) time complexity, where T is the length of the start string, U is the length of the end string, and V is the number of characters in the output list.
+Example
+python
+Copy code
+genome1 = OrfFinder("AAABBBCCC")
+print(genome1.find("AAA", "BB"))  # Output: ["AAABB", "AAABBB"]
+Question 2: Securing the Companies
+Problem Description
+As a manager of a security company, the task is to assign security officers to companies for a month, ensuring each company gets the required number of officers for each shift per day. Constraints include officers' shift preferences and the total number of shifts an officer can work in a month.
+
+Input
+preferences: A list of lists where preferences[i][k] is a binary value indicating if officer i is interested in shift k.
+officers_per_org: A list of lists where officers_per_org[j][k] specifies how many officers company j needs for shift k each day.
+Output
+None if no allocation satisfying all constraints exists.
+Otherwise, a list of lists allocation where allocation[i][j][d][k] is 1 if officer i is allocated to company j for shift k on day d.
+Complexity
+The solution must have a worst-case time complexity of O(m * n * n).
