@@ -1,8 +1,5 @@
 import math
 
-"""
-Assignment 1
-"""
 # ==========
 # Q1
 
